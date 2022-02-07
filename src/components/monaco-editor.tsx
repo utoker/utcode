@@ -1,28 +1,20 @@
-import MonacoEditor, { EditorDidMount } from '@monaco-editor/react';
+import MonacoEditor, { OnChange } from '@monaco-editor/react';
 import prettier from 'prettier';
 import parser from 'prettier/parser-babel';
-import { useRef } from 'react';
 
 interface CodeEditorProps {
-  initialValue: string;
+  value: string;
   onChange(value: string): void;
 }
 
-const CodeEditor: React.FC<CodeEditorProps> = ({ onChange, initialValue }) => {
-  const editorRef = useRef<any>();
-
-  const onEditorDidMount: EditorDidMount = (getValue, monacoEditor) => {
-    editorRef.current = monacoEditor;
-    monacoEditor.onDidChangeModelContent(() => {
-      onChange(getValue());
-    });
+const CodeEditor: React.FC<CodeEditorProps> = ({ value, onChange }) => {
+  const handleEditorChange: OnChange = (code) => {
+    onChange(code || '');
   };
+
   const onFormatClick = () => {
-    //get current value from
-    const unformatted = editorRef.current.getModel().getValue();
-    // format that value
-    const formatted = prettier
-      .format(unformatted, {
+    const formattedCode = prettier
+      .format(value, {
         parser: 'babel',
         plugins: [parser],
         useTabs: false,
@@ -30,16 +22,19 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ onChange, initialValue }) => {
         singleQuote: true,
       })
       .replace(/\n$/, '');
-    // set the formatted value back in the editor
-    editorRef.current.setValue(formatted);
+    onChange(formattedCode);
   };
 
   return (
     <div>
       <button onClick={onFormatClick}>Format</button>
       <MonacoEditor
-        editorDidMount={onEditorDidMount}
-        value={initialValue}
+        theme="vs-dark"
+        height={500}
+        defaultLanguage="javascript"
+        defaultValue="const a = 1"
+        onChange={handleEditorChange}
+        value={value}
         options={{
           wordWrap: 'on',
           minimap: { enabled: false },
@@ -49,13 +44,10 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ onChange, initialValue }) => {
           fontSize: 16,
           scrollBeyondLine: false,
           automaticLayout: true,
+          tabsize: 2,
         }}
-        theme="dark"
-        language="javascript"
-        height="500px"
       />
     </div>
   );
 };
-
 export default CodeEditor;
