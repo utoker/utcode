@@ -8,7 +8,7 @@ import {
 } from '../actions';
 import { CellTypes } from '../cell';
 
-export const moveCells = (id: string, direction: Direction): MoveCellAction => {
+export const moveCell = (id: string, direction: Direction): MoveCellAction => {
   return {
     type: ActionType.MOVE_CELL,
     payload: {
@@ -18,7 +18,7 @@ export const moveCells = (id: string, direction: Direction): MoveCellAction => {
   };
 };
 
-export const updateCells = (id: string, content: string): UpdateCellAction => {
+export const updateCell = (id: string, content: string): UpdateCellAction => {
   return {
     type: ActionType.UPDATE_CELL,
     payload: {
@@ -28,7 +28,7 @@ export const updateCells = (id: string, content: string): UpdateCellAction => {
   };
 };
 
-export const deleteCells = (id: string): DeleteCellAction => {
+export const deleteCell = (id: string): DeleteCellAction => {
   return {
     type: ActionType.DELETE_CELL,
     payload: id,
