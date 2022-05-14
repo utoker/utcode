@@ -64,9 +64,9 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ value, onChange }) => {
           folding: false,
           lineNumbersMinChars: 3,
           fontSize: 16,
-          scrollBeyondLine: false,
+          // scrollBeyondLine: false,
           automaticLayout: true,
-          tabsize: 2,
+          // tabsize: 2,
         }}
       />
     </div>
