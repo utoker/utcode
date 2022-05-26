@@ -1,0 +1,1 @@
+[{"content":"const a = '1asdasdasasdsadasd3333333333343'\nconsole.log(a)\nshow(a)","type":"code","id":"1066n"},{"content":"","type":"code","id":"8d4oz"}]
