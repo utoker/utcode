@@ -1,0 +1,2 @@
+(this["webpackJsonp@utoker-jscode/local-client"]=this["webpackJsonp@utoker-jscode/local-client"]||[]).push([[181],{392:function(e,n){var a;(a=Prism).languages.ignore={comment:/^#.*/m,entry:{pattern:/\S(?:.*(?:(?:\\ )|\S))?/,alias:"string",inside:{operator:/^!|\*\*?|\?/,regex:{pattern:/(^|[^\\])\[[^\[\]]*\]/,lookbehind:!0},punctuation:/\//}}},a.languages.gitignore=a.languages.ignore,a.languages.hgignore=a.languages.ignore,a.languages.npmignore=a.languages.ignore}}]);
+//# sourceMappingURL=181.c46444c8.chunk.js.map

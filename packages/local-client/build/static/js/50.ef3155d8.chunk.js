@@ -1,0 +1,2 @@
+(this["webpackJsonp@utoker-jscode/local-client"]=this["webpackJsonp@utoker-jscode/local-client"]||[]).push([[50],{261:function(e,t){Prism.languages.brainfuck={pointer:{pattern:/<|>/,alias:"keyword"},increment:{pattern:/\+/,alias:"inserted"},decrement:{pattern:/-/,alias:"deleted"},branching:{pattern:/\[|\]/,alias:"important"},operator:/[.,]/,comment:/\S+/}}}]);
+//# sourceMappingURL=50.ef3155d8.chunk.js.map

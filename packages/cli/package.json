@@ -1,5 +1,5 @@
 {
-  "name": "ut-code",
+  "name": "utoker-jscode",
   "version": "1.0.0",
   "description": "",
   "bin": "dist/index.js",
@@ -17,13 +17,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@ut-code/local-client": "^1.0.0"
+    "@utoker-jscode/local-client": "^1.0.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.35",
-    "@ut-code/local-api": "^1.0.0",
+    "@utoker-jscode/local-api": "^1.0.0",
     "commander": "^9.2.0",
     "esbuild": "0.8.26",
     "typescript": "^4.6.4"
-  }
+  },
+  "gitHead": "040d292c0dfea09011f891d340a56a6a3a6cd68a"
 }

@@ -23,7 +23,7 @@ export const serve = (
     );
   } else {
     const packagePath = require.resolve(
-      '@ut-code/local-client/build/index.html'
+      '@utoker-jscode/local-client/build/index.html'
     );
     app.use(express.static(path.dirname(packagePath)));
   }
