@@ -20,9 +20,9 @@
     "@ut-code/local-client": "^1.0.0"
   },
   "devDependencies": {
+    "@types/node": "^17.0.35",
     "@ut-code/local-api": "^1.0.0",
     "commander": "^9.2.0",
-    "@types/node": "^17.0.35",
     "esbuild": "0.8.26",
     "typescript": "^4.6.4"
   }
