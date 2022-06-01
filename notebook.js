@@ -1,0 +1,1 @@
+[{"content":"import { useState } from 'react';\n\nconst Counter = () => {\n  const [count, setCount] = useState(0);\n  return (\n    <div>\n      <button onClick={() => setCount(count + 1)}>Click</button>\n      <h3>Count: {count}</h3>\n    </div>\n  );\n};\n\n// Display any variable or React Component by calling 'show'\nshow(Counter);","type":"code","id":"r4xpg"}]
